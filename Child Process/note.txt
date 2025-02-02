@@ -1,0 +1,4 @@
+exec: Executes a shell command and buffers the output.
+execFile: Similar to exec, but directly executes a file without a shell.
+spawn: Launches a new process with a given command.
+fork: Specifically designed for spawning new Node.js processes.
