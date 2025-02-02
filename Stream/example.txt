@@ -1,1 +1,4 @@
-Hello im Streaming from example file
+Readable - Used for reading data.
+Writable - Used for writing data.
+Duplex - Can be used for both reading and writing.
+Transform - A type of duplex stream where the output is computed based on input.
