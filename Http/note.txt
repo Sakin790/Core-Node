@@ -1,0 +1,10 @@
+The http module in Node.js is a fundamental module 
+used to create web servers and handle HTTP requests and
+responses. It provides the basic building blocks for 
+creating web applications and APIs.
+
+
+Key Concepts
+HTTP Server: Listens for incoming HTTP requests and sends responses.
+HTTP Request: Sent by a client to a server to request resources or perform actions.
+HTTP Response: Sent by a server to a client, containing the requested resource or the result of the action.
