@@ -1,4 +1,5 @@
 import express from "express";
+import { Worker } from "worker_threads";
 
 const app = express();
 
@@ -8,11 +9,14 @@ app.get("/nonBlocking", (req, res) => {
   });
 });
 app.get("/blocking", (req, res) => {
-  let result: number = 0;
-  for (let i = 0; i < 10000000000; i++) {
-    result++;
-  }
-  res.status(200).send("The Result is" + result);
+  const worker = new Worker("./worker.ts");
+
+  worker.on("message", (result) => {
+    res.status(200).send("The Result is" + result);
+  });
+  worker.on("error", (error) => {
+    res.status(400).send("The error is" + error);
+  });
 });
 app.listen(8000, () => {
   console.info("Ok");
