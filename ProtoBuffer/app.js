@@ -1,0 +1,1 @@
+import {protoLoader} from "@grpc/grpc-js"
